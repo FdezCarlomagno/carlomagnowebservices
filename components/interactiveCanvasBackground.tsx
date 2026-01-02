@@ -167,7 +167,7 @@ export default function InteractiveCanvasBackground({ isActive = true }: Props) 
             vx: (Math.random() - 0.5) * 2,
             vy: (Math.random() - 0.5) * 2,
             life: 0,
-            maxLife: Math.random() * 80 + 60,
+            maxLife: Math.random() * 30 + 20,
             colorPhase: Math.floor(Math.random() * colors.length)
           })
         }
@@ -176,7 +176,7 @@ export default function InteractiveCanvasBackground({ isActive = true }: Props) 
 
     const animate = () => {
       // fondo sutil pero permite que los colores resalten
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.04)'
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.12)'
       ctx.fillRect(0, 0, dimensions.width, dimensions.height)
 
       for (let y = 0; y < rows; y++) {
